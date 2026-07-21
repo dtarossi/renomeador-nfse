@@ -981,32 +981,75 @@ if st.runtime.exists():
     </div>
     """, unsafe_allow_html=True)
 
-    # TOP TOOLBAR: FILE UPLOADER AND NAMING PATTERN SELECTOR
+    # Detect if running locally on macOS with local directory support
+    is_mac_local = os.path.exists("/Users/Tarossi") and sys.platform == "darwin"
+
+    # TOP TOOLBAR: HYBRID FILE ORIGIN AND NAMING PATTERN SELECTOR
     st.markdown('<div class="glass-card" style="margin-bottom: 1.5rem; padding: 1.2rem;">', unsafe_allow_html=True)
-    col_uploader, col_conversion, col_pattern, col_filter = st.columns([2.8, 1.6, 2.0, 1.6])
+    col_uploader, col_conversion, col_pattern, col_filter = st.columns([3.0, 1.5, 1.9, 1.6])
 
     with col_uploader:
-        uploaded_files = st.file_uploader(
-            "📤 Upload de Arquivos (PDF e XML):",
-            type=["pdf", "xml"],
-            accept_multiple_files=True,
-            key="header_file_uploader"
-        )
-        if uploaded_files:
-            cloud_workdir = "/tmp/nfse_cloud_workdir"
-            os.makedirs(cloud_workdir, exist_ok=True)
-            for old_f in os.listdir(cloud_workdir):
-                try:
-                    os.remove(os.path.join(cloud_workdir, old_f))
-                except Exception:
-                    pass
-            for uf in uploaded_files:
-                target_path = os.path.join(cloud_workdir, uf.name)
-                with open(target_path, "wb") as f:
-                    f.write(uf.getbuffer())
-            if st.session_state.active_directory != cloud_workdir:
-                st.session_state.active_directory = cloud_workdir
-                st.rerun()
+        if is_mac_local:
+            source_mode = st.radio(
+                "📂 Origem dos Arquivos:",
+                options=["📁 Pasta Local do Mac (Direto)", "📤 Upload de Arquivos"],
+                horizontal=True,
+                key="source_mode"
+            )
+            if source_mode == "📁 Pasta Local do Mac (Direto)":
+                col_path_text, col_btn_pick = st.columns([2.0, 1.0])
+                with col_path_text:
+                    st.markdown(f"<div style='margin-top: 4px;'><small><b>Pasta Atual:</b><br><code style='font-size:0.85em;'>{st.session_state.active_directory}</code></small></div>", unsafe_allow_html=True)
+                with col_btn_pick:
+                    if st.button("📁 Selecionar Pasta", key="btn_choose_folder_mac"):
+                        new_path = choose_folder()
+                        if new_path:
+                            st.session_state.active_directory = new_path
+                            st.rerun()
+            else:
+                uploaded_files = st.file_uploader(
+                    "📤 Upload de Arquivos (PDF e XML):",
+                    type=["pdf", "xml"],
+                    accept_multiple_files=True,
+                    key="header_file_uploader"
+                )
+                if uploaded_files:
+                    cloud_workdir = "/tmp/nfse_cloud_workdir"
+                    os.makedirs(cloud_workdir, exist_ok=True)
+                    for old_f in os.listdir(cloud_workdir):
+                        try:
+                            os.remove(os.path.join(cloud_workdir, old_f))
+                        except Exception:
+                            pass
+                    for uf in uploaded_files:
+                        target_path = os.path.join(cloud_workdir, uf.name)
+                        with open(target_path, "wb") as f:
+                            f.write(uf.getbuffer())
+                    if st.session_state.active_directory != cloud_workdir:
+                        st.session_state.active_directory = cloud_workdir
+                        st.rerun()
+        else:
+            uploaded_files = st.file_uploader(
+                "📤 Upload de Arquivos (PDF e XML):",
+                type=["pdf", "xml"],
+                accept_multiple_files=True,
+                key="header_file_uploader"
+            )
+            if uploaded_files:
+                cloud_workdir = "/tmp/nfse_cloud_workdir"
+                os.makedirs(cloud_workdir, exist_ok=True)
+                for old_f in os.listdir(cloud_workdir):
+                    try:
+                        os.remove(os.path.join(cloud_workdir, old_f))
+                    except Exception:
+                        pass
+                for uf in uploaded_files:
+                    target_path = os.path.join(cloud_workdir, uf.name)
+                    with open(target_path, "wb") as f:
+                        f.write(uf.getbuffer())
+                if st.session_state.active_directory != cloud_workdir:
+                    st.session_state.active_directory = cloud_workdir
+                    st.rerun()
 
     with col_conversion:
         conversion_option = st.selectbox(
