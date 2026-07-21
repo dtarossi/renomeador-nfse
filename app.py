@@ -981,41 +981,40 @@ if st.runtime.exists():
     </div>
     """, unsafe_allow_html=True)
 
-    # TOP TOOLBAR: FOLDER SELECTOR AND NAMING PATTERN SELECTOR
+    # TOP TOOLBAR: FILE UPLOADER AND NAMING PATTERN SELECTOR
     st.markdown('<div class="glass-card" style="margin-bottom: 1.5rem; padding: 1.2rem;">', unsafe_allow_html=True)
-    col_path, col_btn, col_xml, col_pattern, col_filter = st.columns([2.2, 1.1, 1.1, 1.7, 1.6])
+    col_uploader, col_conversion, col_pattern, col_filter = st.columns([2.8, 1.6, 2.0, 1.6])
 
-    with col_path:
-        st.markdown(f"<div style='margin-top: 5px; font-size:1.02rem;'>📁 <b>Pasta de Trabalho:</b> <code style='font-size:0.92em;'>{st.session_state.active_directory}</code></div>", unsafe_allow_html=True)
-
-    with col_btn:
-        if st.button("📁 Selecionar Pasta", key="btn_choose_folder"):
-            new_path = choose_folder()
-            if new_path:
-                st.session_state.active_directory = new_path
+    with col_uploader:
+        uploaded_files = st.file_uploader(
+            "📤 Upload de Arquivos (PDF e XML):",
+            type=["pdf", "xml"],
+            accept_multiple_files=True,
+            key="header_file_uploader"
+        )
+        if uploaded_files:
+            cloud_workdir = "/tmp/nfse_cloud_workdir"
+            os.makedirs(cloud_workdir, exist_ok=True)
+            for old_f in os.listdir(cloud_workdir):
+                try:
+                    os.remove(os.path.join(cloud_workdir, old_f))
+                except Exception:
+                    pass
+            for uf in uploaded_files:
+                target_path = os.path.join(cloud_workdir, uf.name)
+                with open(target_path, "wb") as f:
+                    f.write(uf.getbuffer())
+            if st.session_state.active_directory != cloud_workdir:
+                st.session_state.active_directory = cloud_workdir
                 st.rerun()
 
-    with col_xml:
-        active_dir = st.session_state.active_directory
-        if st.button("📄 XML para PDF", key="btn_batch_xml2pdf", help="Gerar PDFs visuais de todos os XMLs desta pasta"):
-            has_xml = os.path.exists(active_dir) and any(f.lower().endswith(".xml") for f in os.listdir(active_dir))
-            if not has_xml:
-                st.warning("⚠️ Nenhum arquivo XML encontrado na pasta selecionada.")
-            else:
-                xml_count = 0
-                success_count = 0
-                for f in os.listdir(active_dir):
-                    if f.lower().endswith(".xml"):
-                        xml_count += 1
-                        xml_path = os.path.join(active_dir, f)
-                        pdf_name = os.path.splitext(f)[0] + ".pdf"
-                        pdf_path = os.path.join(active_dir, pdf_name)
-                        success, err = pdf_generator.generate_pdf_from_xml(xml_path, pdf_path)
-                        if success:
-                            success_count += 1
-                if success_count > 0:
-                    st.toast(f"Sucesso: {success_count} de {xml_count} PDFs gerados! 🎉")
-                    st.rerun()
+    with col_conversion:
+        conversion_option = st.selectbox(
+            "📄 Conversão de Layout:",
+            options=["XML para PDF", "PDF para PDF", "Sem Conversão"],
+            index=0,
+            key="conversion_option"
+        )
 
     with col_pattern:
         naming_pattern = st.selectbox(
@@ -1035,50 +1034,29 @@ if st.runtime.exists():
 
     st.markdown('</div>', unsafe_allow_html=True)
 
-    # Validate directory access
+    # Validate directory access and process files
     active_directory = st.session_state.active_directory
 
-    if not os.path.exists(active_directory):
-        cloud_workdir = "/tmp/nfse_cloud_workdir"
-        os.makedirs(cloud_workdir, exist_ok=True)
-
-        st.markdown('<div class="glass-card" style="margin-bottom: 1.5rem; padding: 1.8rem; text-align: center;">', unsafe_allow_html=True)
-        st.markdown("### 📤 Upload de Arquivos (Modo Nuvem / Streamlit Cloud)")
-        st.markdown("<p style='color:#94a3b8; margin-bottom: 1.2rem;'>Arraste e solte seus arquivos PDF e XML de NFS-e para analisar e renomear diretamente pelo navegador.</p>", unsafe_allow_html=True)
-
-        uploaded_files = st.file_uploader(
-            "Selecione ou arraste os arquivos de Notas Fiscais (PDF e XML):",
-            type=["pdf", "xml"],
-            accept_multiple_files=True,
-            key="cloud_file_uploader"
-        )
-
-        if uploaded_files:
-            # Clear previous uploaded files
-            for old_f in os.listdir(cloud_workdir):
-                try:
-                    os.remove(os.path.join(cloud_workdir, old_f))
-                except Exception:
-                    pass
-            for uf in uploaded_files:
-                target_path = os.path.join(cloud_workdir, uf.name)
-                with open(target_path, "wb") as f:
-                    f.write(uf.getbuffer())
-            st.session_state.active_directory = cloud_workdir
-            st.toast("Arquivos enviados com sucesso! 🎉")
-            st.rerun()
-
-        st.markdown('</div>', unsafe_allow_html=True)
+    if not os.path.exists(active_directory) or not os.listdir(active_directory):
+        st.info("💡 Por favor, envie seus arquivos PDF e XML no campo **Upload de Arquivos** acima para iniciar a análise e renomeação.")
         file_results = []
     else:
+        # Automatic conversion trigger based on dropdown selection
+        if st.session_state.get("conversion_option") == "XML para PDF":
+            for f in os.listdir(active_directory):
+                if f.lower().endswith(".xml"):
+                    xml_path = os.path.join(active_directory, f)
+                    pdf_name = os.path.splitext(f)[0] + ".pdf"
+                    pdf_path = os.path.join(active_directory, pdf_name)
+                    if not os.path.exists(pdf_path):
+                        pdf_generator.generate_pdf_from_xml(xml_path, pdf_path)
+
         # Process files
-        with st.spinner("Analisando arquivos PDF/XML na pasta..."):
+        with st.spinner("Analisando arquivos PDF/XML..."):
             file_results = process_folder(active_directory, st.session_state.naming_pattern, st.session_state.file_filter)
 
         if not file_results:
-            st.warning("⚠️ Nenhum arquivo PDF ou XML foi encontrado no diretório selecionado.")
-            if active_directory == "/tmp/nfse_cloud_workdir":
-                st.info("💡 Envie arquivos utilizando o campo de upload acima.")
+            st.warning("⚠️ Nenhum arquivo PDF ou XML foi encontrado entre os arquivos enviados.")
         else:
             # 1. MONITORING PANEL (Top level metrics glows)
             ready_count = sum(1 for r in file_results if r["status"] == "ready")
