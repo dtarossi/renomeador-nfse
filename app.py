@@ -24,9 +24,17 @@ if st.runtime.exists():
         initial_sidebar_state="collapsed"
     )
 
-# File paths in workspace
-MAPPINGS_FILE = "/Users/Tarossi/Library/CloudStorage/OneDrive-BibliotecasCompartilhadas-SELECTOCUPACIONALLTDA(2)/Communication site - Documentos/IA/SELECT/FISCAL/name_mappings.json"
-CNPJ_DB_FILE = "/Users/Tarossi/Library/CloudStorage/OneDrive-BibliotecasCompartilhadas-SELECTOCUPACIONALLTDA(2)/Communication site - Documentos/IA/SELECT/FISCAL/cnpj_database.json"
+# File paths in workspace (Dynamic for both Local Mac and Streamlit Cloud)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+LOCAL_ONEDRIVE_DIR = "/Users/Tarossi/Library/CloudStorage/OneDrive-BibliotecasCompartilhadas-SELECTOCUPACIONALLTDA(2)/Communication site - Documentos/IA/SELECT/FISCAL"
+
+if os.path.exists(LOCAL_ONEDRIVE_DIR):
+    MAPPINGS_FILE = os.path.join(LOCAL_ONEDRIVE_DIR, "name_mappings.json")
+    CNPJ_DB_FILE = os.path.join(LOCAL_ONEDRIVE_DIR, "cnpj_database.json")
+else:
+    MAPPINGS_FILE = os.path.join(BASE_DIR, "name_mappings.json")
+    CNPJ_DB_FILE = os.path.join(BASE_DIR, "cnpj_database.json")
+
 SWIFT_OCR_SCRIPT = "/Users/Tarossi/.gemini/antigravity/scratch/ocr_pdf.swift"
 
 # Helper to load/save manual name mappings (backward compatibility)
