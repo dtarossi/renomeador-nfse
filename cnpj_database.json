@@ -1,0 +1,826 @@
+{
+    "cnpjs": {
+        "07993752000140": {
+            "razao_social": "COLUCO SERVICOS DE ASSISTENCIA MEDICA OCUPACIONAL LTDA ME",
+            "nome_fantasia": "COLUCO"
+        },
+        "48713280000101": {
+            "razao_social": "BOCCHIO BARBOSA LABORATORIO LTDA",
+            "nome_fantasia": "BOCCHIO BARBOSA LABORATORIO"
+        },
+        "29293809000211": {
+            "razao_social": "DEBORA ELAINE PENTEADO",
+            "nome_fantasia": "APTA MEDICINA"
+        },
+        "37676904000141": {
+            "razao_social": "PENACHIONE EXAMES LABORATORIAIS LTDA",
+            "nome_fantasia": "ULTRALABOR"
+        },
+        "34850043000188": {
+            "razao_social": "ULTRA OCUPACIONAL MEDICINA, SEGURANCA E HIGIENE DO TRABALHO LTDA",
+            "nome_fantasia": "ULTRA OCUPACIONAL MEDICINA, SEGURANCA E HIGIENE DO TRABALHO"
+        },
+        "54338544000197": {
+            "razao_social": "HIBARI SERVICOS MEDICOS LTDA",
+            "nome_fantasia": "DRA CHARLINY HIBARI SAITO"
+        },
+        "26286900000130": {
+            "razao_social": "MULTI NOA DIAGNOSTICOS MEDICOS LTDA",
+            "nome_fantasia": "DIGIMAX"
+        },
+        "35524031228545": {
+            "razao_social": "TRASMED MEDICINA OCUPACIONAL LTDA",
+            "nome_fantasia": ""
+        },
+        "60220786000184": {
+            "razao_social": "SSO SAUDE E SEGURANCA OCUPACIONAL DO TRABALHADOR LTDA",
+            "nome_fantasia": "SSO SAUDE E SEGURANCA OCUPACIONAL DO TRABALHADOR"
+        },
+        "07802562000106": {
+            "razao_social": "COLINA CONTABILIDADE LTDA",
+            "nome_fantasia": ""
+        },
+        "51714868000194": {
+            "razao_social": "JK SAUDE SERVICOS MEDICOS LTDA",
+            "nome_fantasia": ""
+        },
+        "28545961000109": {
+            "razao_social": "TRASMED MEDICINA OCUPACIONAL LTDA",
+            "nome_fantasia": "TRASMED"
+        },
+        "51989360000107": {
+            "razao_social": "SEGMAIS MEDICINA OCUPACIONAL E SEGURANCA DO TRABALHO LTDA",
+            "nome_fantasia": "SEGMAIS SAUDE OCUPACIONAL"
+        },
+        "52095649000137": {
+            "razao_social": "SOC RH DESENVOLVIMENTO DE SISTEMAS LTDA",
+            "nome_fantasia": "SOC RH"
+        },
+        "46308162000192": {
+            "razao_social": "CENTER MEDSEG RG LTDA",
+            "nome_fantasia": "CENTER MEDSEG SEGURANCA E SAUDE OCUPACIONAL"
+        },
+        "14174709000118": {
+            "razao_social": "PREVENCAO TOTAL SEGURANCA E SAUDE OCUPACIONAL LTDA",
+            "nome_fantasia": "PREVENCAO TOTAL"
+        },
+        "01061386000104": {
+            "razao_social": "UNIDADE RADIOLOGICA DE AMERICANA LTDA",
+            "nome_fantasia": "DIGIMAX DIAGNOSTICO"
+        },
+        "63358459000181": {
+            "razao_social": "EGESTAO E ASSESSORIA LTDA",
+            "nome_fantasia": ""
+        },
+        "14487446000105": {
+            "razao_social": "NOVASEG - MEDICINA OCUPACIONAL E CONSULTORIA EM SEGURANCA DO TRABALHO E MEIO AMBIENTE LTDA",
+            "nome_fantasia": "NOVASEG SEGURANCA DO TRABALHO E MEIO AMBIENTE"
+        },
+        "39860194000130": {
+            "razao_social": "ROPERBRAS SEGURANCA E MEDICINA DO TRABALHO LTDA",
+            "nome_fantasia": "ROPERBRAS SEGURANCA E MEDICINA DO TRABALHO"
+        },
+        "34468224000144": {
+            "razao_social": "MATOS & PICOLI OCUPACIONAL LTDA",
+            "nome_fantasia": "MATOS & PICOLI SEGURANCA E MEDICINA DO TRABALHO"
+        },
+        "14420000028000": {
+            "razao_social": "CNPJ 14420000028000",
+            "nome_fantasia": ""
+        },
+        "42206038000165": {
+            "razao_social": "ADD MAIS SERVICOS E SEGURANCA DO TRABALHO LTDA",
+            "nome_fantasia": ""
+        },
+        "17677784000190": {
+            "razao_social": "TELEMEDIC LTDA",
+            "nome_fantasia": "QUEST"
+        },
+        "29650878000154": {
+            "razao_social": "AMPLIBEM DO BRASIL FONOAUDIOLOGIA LTDA",
+            "nome_fantasia": "AMPLIBEM DO BRASIL FONOAUDIOLOGIA"
+        },
+        "29412957000127": {
+            "razao_social": "LEANDRO DELLA DEA VIEIRA DA CRUZ",
+            "nome_fantasia": "LD SEGURANCA E MEDICINA DO TRABALHO"
+        },
+        "13220000028000": {
+            "razao_social": "CNPJ 13220000028000",
+            "nome_fantasia": ""
+        },
+        "11469869000104": {
+            "razao_social": "IMEDTA- INSTITUTO DE MEDICINA DO TRABALHO E ASSESSORIA LTDA",
+            "nome_fantasia": ""
+        },
+        "42692591000155": {
+            "razao_social": "AC TRUST MED CENTRO DE SAUDE LTDA",
+            "nome_fantasia": "TRUST MED"
+        },
+        "62744051000185": {
+            "razao_social": "PREVIX SERVICOS MEDICOS E DIAGNOSTICOS LTDA",
+            "nome_fantasia": "PREVIX SERVICOS MEDICOS E DIAGNOSTICOS"
+        },
+        "96504741000189": {
+            "razao_social": "SLN SERVICOS MEDICOS LTDA",
+            "nome_fantasia": ""
+        },
+        "25015721000104": {
+            "razao_social": "J. M. G. FELIX",
+            "nome_fantasia": "FELIXSEG TREINAMENTOS E SEGURANCA DO TRABALHO"
+        },
+        "14378199000109": {
+            "razao_social": "FC PLASTICOS DESCARTAVEIS LTDA",
+            "nome_fantasia": ""
+        },
+        "49442296000190": {
+            "razao_social": "ESCOLA DE EDUCACAO INFANTIL MEU CANTINHO LTDA",
+            "nome_fantasia": ""
+        },
+        "32436047000199": {
+            "razao_social": "GARAGEM G1 FUNILARIA E PINTURA LTDA",
+            "nome_fantasia": "GARAGE G1"
+        },
+        "05906999000156": {
+            "razao_social": "NC PLASTICOS DESCARTAVEIS LTDA",
+            "nome_fantasia": ""
+        },
+        "54174519000115": {
+            "razao_social": "ENFOKO PROMOCOES E MERCHANDISING LTDA",
+            "nome_fantasia": "ENFOKO PROMOCOES E MERCHANDISING"
+        },
+        "10748732000118": {
+            "razao_social": "AUTO POSTO NEW VISION LTDA",
+            "nome_fantasia": "NEW VISION"
+        },
+        "45802481000197": {
+            "razao_social": "AUTO ELETRICA FERREIRA VANETTE LTDA",
+            "nome_fantasia": ""
+        },
+        "18986134000199": {
+            "razao_social": "EVOLUTTION AUTOMOTIVE INDUSTRIA & COMERCIO DE FREIOS LTDA",
+            "nome_fantasia": ""
+        },
+        "04300355000157": {
+            "razao_social": "EVANIA LUZ COUTINHO",
+            "nome_fantasia": "LUZ DO SOL"
+        },
+        "27923081000158": {
+            "razao_social": "COMERCIO DE CARNES BOM CORTE LTDA",
+            "nome_fantasia": ""
+        },
+        "58369575000166": {
+            "razao_social": "EVOLUTTION TECNOLOGIA EM USINAGEM LTDA",
+            "nome_fantasia": ""
+        },
+        "19966610000334": {
+            "razao_social": "DFTX COMERCIO LTDA",
+            "nome_fantasia": "HOLY COOK PIRACICABA"
+        },
+        "08776621000173": {
+            "razao_social": "S. H. I. MORENO LOPES",
+            "nome_fantasia": ""
+        },
+        "07750648000124": {
+            "razao_social": "BOGGE COMERCIO DE CONFECCOES LTDA",
+            "nome_fantasia": "BOGGE CONFECCOES"
+        },
+        "25198221000147": {
+            "razao_social": "SFS COMERCIO E SERVICOS LTDA",
+            "nome_fantasia": ""
+        },
+        "09095702000170": {
+            "razao_social": "EUREKA COMERCIO E MONTAGEM DE EQUIPAMENTOS LTDA",
+            "nome_fantasia": ""
+        },
+        "18006736000132": {
+            "razao_social": "CDM PERFLEX PORTAS E VIDROS PARA MOVEIS LTDA",
+            "nome_fantasia": "PERFLEX COMERCIO DE ALUMINIOS E VIDROS"
+        },
+        "62240548000166": {
+            "razao_social": "MOLDURAS JUANA LTDA",
+            "nome_fantasia": ""
+        },
+        "14256420000148": {
+            "razao_social": "GSD METALURGICA E CALDEIRARIA LTDA",
+            "nome_fantasia": "GSD METALURGICA E CALDEIRARIA"
+        },
+        "61890942000187": {
+            "razao_social": "MALAGUETTA MARMITARIA E RESTAURANTE LTDA",
+            "nome_fantasia": ""
+        },
+        "62921991000100": {
+            "razao_social": "SUNLABS BRASIL ENERGIA RENOVAVEL & SUSTENTABILIDADE LTDA",
+            "nome_fantasia": ""
+        },
+        "19355233000135": {
+            "razao_social": "CONDOMINIO SAO PEDRO E SAO MARCOS",
+            "nome_fantasia": "CONDOMINIO SAO PEDRO E SAO MARCOS"
+        },
+        "25449435000149": {
+            "razao_social": "CARDS SERVICOS DIGITAL E ADMINISTRATIVO LTDA",
+            "nome_fantasia": "CARDS INOVA"
+        },
+        "07551564000161": {
+            "razao_social": "ABSOLUTA NEGOCIOS IMOBILIARIOS LTDA",
+            "nome_fantasia": "ABSOLUTA IMOBILIARIA"
+        },
+        "19966610000172": {
+            "razao_social": "DFTX COMERCIO LTDA",
+            "nome_fantasia": "HOLY COOK CAMPINAS"
+        },
+        "60322519000118": {
+            "razao_social": "FABRICAE TECIDOS LTDA",
+            "nome_fantasia": "FABRICAE"
+        },
+        "30063277000124": {
+            "razao_social": "C.E.M. LOPES",
+            "nome_fantasia": ""
+        },
+        "41723184000103": {
+            "razao_social": "MARIANA NEVES VIEIRA 43638314804",
+            "nome_fantasia": "CACAU SUPREMO"
+        },
+        "42901279000124": {
+            "razao_social": "DAVID SOUZA ROSA 27497961802",
+            "nome_fantasia": ""
+        },
+        "54991369000132": {
+            "razao_social": "FLORENCA HOTEL LTDA",
+            "nome_fantasia": ""
+        },
+        "62636824000100": {
+            "razao_social": "S M PECAS E ACESSORIOS DE VEICULOS LTDA",
+            "nome_fantasia": ""
+        },
+        "18936879000143": {
+            "razao_social": "AUTO ELETRICA BENATTI LTDA",
+            "nome_fantasia": "AUTO ELETRICA TREVO"
+        },
+        "11448256000182": {
+            "razao_social": "SUPER CENTRIFUGAS LTDA",
+            "nome_fantasia": "SUPER CENTRIFUGAS"
+        },
+        "40359059000195": {
+            "razao_social": "NAVI & BERNARDI NUTRITION LTDA",
+            "nome_fantasia": "SCOOP SUPLEMENTOS"
+        },
+        "60715000000108": {
+            "razao_social": "CONDOMINIO EDIFICIO DALIAS",
+            "nome_fantasia": ""
+        },
+        "74548413000141": {
+            "razao_social": "AUTO POSTO AMCG LTDA",
+            "nome_fantasia": ""
+        },
+        "62468418000185": {
+            "razao_social": "EDIFICIO RESIDENCIAL RENOIR",
+            "nome_fantasia": ""
+        },
+        "27289605000109": {
+            "razao_social": "ROPERSEG GESTAO EMPRESARIAL LTDA",
+            "nome_fantasia": "ROPERBRAS SEGURANCA E MEDICINA DO TRABALHO"
+        },
+        "26551567000140": {
+            "razao_social": "SEAROM - LABORATORIO E DIAGNOSTICO LTDA.",
+            "nome_fantasia": ""
+        },
+        "20215683000101": {
+            "razao_social": "CLICK DIGITAL SOLUTIONS LTDA",
+            "nome_fantasia": "CLICK DIGITAL"
+        },
+        "30080649000120": {
+            "razao_social": "WORK MEDICINA E SEGURANCA DO TRABALHO LTDA",
+            "nome_fantasia": ""
+        },
+        "66405225000136": {
+            "razao_social": "66.405.225 ALEX ROBERTO ALVES CORREA",
+            "nome_fantasia": ""
+        },
+        "63982563000142": {
+            "razao_social": "ATC PECAS E SERVICOS AUTOMOTIVOS LTDA",
+            "nome_fantasia": ""
+        },
+        "04103848000105": {
+            "razao_social": "BAIANO AUTO ELETRICA PISSOLATO LTDA",
+            "nome_fantasia": ""
+        },
+        "66834961000100": {
+            "razao_social": "BISPO EMPREENDIMENTOS IMOBILIARIOS S/S LTDA",
+            "nome_fantasia": "BISPO IMOVEIS AMERICANA"
+        },
+        "54369310000107": {
+            "razao_social": "B.M. SISTEMAS DE SEGURANCA E MONITORAMENTO LTDA",
+            "nome_fantasia": "PRIME GUARD SISTEMAS DE SEGURANCA E MONITORAMENTO"
+        },
+        "03842237000108": {
+            "razao_social": "TRIADE SBO ALUGUEL DE MAQUINAS E EQUIPAMENTOS LTDA",
+            "nome_fantasia": "CASA DO CONSTRUTOR"
+        },
+        "36665483000190": {
+            "razao_social": "DATA FOR COMPANY LTDA.",
+            "nome_fantasia": "DATA4COMPANY"
+        },
+        "28039379000162": {
+            "razao_social": "DIGICOMM SOLUCOES EM INFORMATICA LTDA",
+            "nome_fantasia": ""
+        },
+        "52132405000187": {
+            "razao_social": "52.132.405 DORVAL CARNERO MUNOZ",
+            "nome_fantasia": ""
+        },
+        "63976350000108": {
+            "razao_social": "63.976.350 EDIMAR FRUTUOSO DOS REIS",
+            "nome_fantasia": ""
+        },
+        "58841939000169": {
+            "razao_social": "58.841.939 EDUARDO RODRIGUES DOS SANTOS",
+            "nome_fantasia": ""
+        },
+        "59771757000121": {
+            "razao_social": "59.771.757 SARAH REIS RODRIGUES",
+            "nome_fantasia": ""
+        },
+        "42034585000100": {
+            "razao_social": "FABIO J. MARTINS LTDA",
+            "nome_fantasia": "FABIO J. MARTINS"
+        },
+        "14500000300597": {
+            "razao_social": "CNPJ 14500000300597",
+            "nome_fantasia": ""
+        },
+        "63554067000198": {
+            "razao_social": "HAPVIDA ASSISTENCIA MEDICA S.A.",
+            "nome_fantasia": "HAPVIDA"
+        },
+        "19299579000163": {
+            "razao_social": "INICIATIVA APLICATIVOS LTDA",
+            "nome_fantasia": "INICIATIVA APLICATIVOS"
+        },
+        "11721433000152": {
+            "razao_social": "IDONEA COMUNICACAO LTDA",
+            "nome_fantasia": "IDONEA COMUNICACAO"
+        },
+        "24960705000119": {
+            "razao_social": "J. E. MORAES LTDA",
+            "nome_fantasia": "JE-FORCE"
+        },
+        "54458289000116": {
+            "razao_social": "54.458.289 JOAO PAULO ALVES CORREA",
+            "nome_fantasia": ""
+        },
+        "54280757000105": {
+            "razao_social": "54.280.757 JULIANA APARECIDA BRAGA",
+            "nome_fantasia": ""
+        },
+        "62321280000197": {
+            "razao_social": "62.321.280 KEVIN ADRIEL MIATELO",
+            "nome_fantasia": ""
+        },
+        "16670085076720": {
+            "razao_social": "LOCALIZA RENT A CAR SA",
+            "nome_fantasia": ""
+        },
+        "55357677000173": {
+            "razao_social": "LOPES RIBEIRO ADMINISTRACAO DE BENS LTDA",
+            "nome_fantasia": ""
+        },
+        "29021031000100": {
+            "razao_social": "LUCIMARA FIDELIS SILVA 12349212866",
+            "nome_fantasia": ""
+        },
+        "34777702000106": {
+            "razao_social": "LUCIANAVIEIRADESOUSAMACHADO29281552876",
+            "nome_fantasia": ""
+        },
+        "02630115000195": {
+            "razao_social": "MARQUINHO AUTO SCAP COM DE ESCAPAMENTOS LTDA EPP",
+            "nome_fantasia": ""
+        },
+        "32899548000101": {
+            "razao_social": "32.899.548MATHEUSBARBOSARODRIGUES",
+            "nome_fantasia": ""
+        },
+        "23954149000105": {
+            "razao_social": "23.954.149MARCELORODRIGOBARBOSA",
+            "nome_fantasia": ""
+        },
+        "40761054000194": {
+            "razao_social": "MIG USINAGEM LTDA.",
+            "nome_fantasia": ""
+        },
+        "27191369000185": {
+            "razao_social": "MOTORELE MOTORES ELETRICOS LTDA",
+            "nome_fantasia": ""
+        },
+        "17120482000116": {
+            "razao_social": "N & C BRASIL PROCESSAMENTO DE DADOS LTDA",
+            "nome_fantasia": ""
+        },
+        "18511742000147": {
+            "razao_social": "OMIEXPERIENCE LTDA.",
+            "nome_fantasia": ""
+        },
+        "10945498000119": {
+            "razao_social": "LUIZ PENKO FELISBINO",
+            "nome_fantasia": ""
+        },
+        "05370858000161": {
+            "razao_social": "PROCUREMENT NEGOCIOS ELETRONICOS S/A",
+            "nome_fantasia": "PETRONECT"
+        },
+        "26195288000190": {
+            "razao_social": "PLUXEE CORRETORA DE SEGUROS BRASIL LTDA",
+            "nome_fantasia": ""
+        },
+        "32727609000153": {
+            "razao_social": "ROBERTO FRANCISCO BARBOSA 16799188854",
+            "nome_fantasia": ""
+        },
+        "48758293000105": {
+            "razao_social": "48.758.293 ROBSON TAROSSI",
+            "nome_fantasia": ""
+        },
+        "04088208000165": {
+            "razao_social": "SEM PARAR INSTITUICAO DE PAGAMENTO LTDA",
+            "nome_fantasia": ""
+        },
+        "55201756000190": {
+            "razao_social": "55.201.756 SIDMAR ALBERTO SCARANTE",
+            "nome_fantasia": ""
+        },
+        "51107470000190": {
+            "razao_social": "SMACMOTION MAQUINAS E EQUIPAMENTOS INDUSTRIAIS LTDA",
+            "nome_fantasia": "SMACMOTION"
+        },
+        "10461302000110": {
+            "razao_social": "SOLIDES TECNOLOGIA S/A",
+            "nome_fantasia": "SOLIDES"
+        },
+        "50254514000141": {
+            "razao_social": "50.254.514 SUELLEN CRISTINA MARQUES",
+            "nome_fantasia": ""
+        },
+        "12264335000104": {
+            "razao_social": "GERADORES E TENDAS JK LTDA",
+            "nome_fantasia": ""
+        },
+        "55277488000190": {
+            "razao_social": "55.277.488 THIAGO HENRIQUE LEAO",
+            "nome_fantasia": ""
+        },
+        "48628366000136": {
+            "razao_social": "UNIMED DE SANTA BARBARA DOESTE AMERICANA COOP TRAB MED",
+            "nome_fantasia": "UNIMED SANTA BARBARA D'OESTE E AMERICANA"
+        },
+        "28630531000187": {
+            "razao_social": "UNIMED SAO GONCALO NITEROI SOC COOP SERV MED HOSP LTDA",
+            "nome_fantasia": "UNIMED LESTE FLUMINENSE"
+        },
+        "02558157000162": {
+            "razao_social": "TELEFONICA BRASIL S.A.",
+            "nome_fantasia": ""
+        },
+        "48130011000112": {
+            "razao_social": "WENDELL JONES RODRIGUES 32808253850",
+            "nome_fantasia": ""
+        },
+        "06990590000123": {
+            "razao_social": "GOOGLE BRASIL INTERNET LTDA.",
+            "nome_fantasia": ""
+        },
+        "66784544000108": {
+            "razao_social": "MASSONSOLUCOESELETRICASLTDA",
+            "nome_fantasia": ""
+        },
+        "32916420000109": {
+            "razao_social": "EMPRESAS ECO LTDA",
+            "nome_fantasia": ""
+        },
+        "65985347000186": {
+            "razao_social": "65.985.347 GABRIELA ROBERTA BONINI DA SILVA",
+            "nome_fantasia": ""
+        },
+        "23770379000114": {
+            "razao_social": "QUEST GROUP LTDA",
+            "nome_fantasia": "QUEST GROUP LTDA"
+        },
+        "46180895000194": {
+            "razao_social": "EFG CLINICA MEDICA LTDA",
+            "nome_fantasia": ""
+        },
+        "11720815000161": {
+            "razao_social": "SPIX MEDICINA LTDA.",
+            "nome_fantasia": "SPIX MEDICINA OCUPACIONAL"
+        },
+        "30013123000128": {
+            "razao_social": "RWE COMERCIO DE PRODUTOS E SERVICOS MEDICOS HOSPITALARES LTDA",
+            "nome_fantasia": ""
+        },
+        "18797265000128": {
+            "razao_social": "SUPER SEG ASSESSORIA DE MEDICINA E SEGURANCA DO TRABALHO LTDA",
+            "nome_fantasia": "SUPER SEG"
+        },
+        "13724435000120": {
+            "razao_social": "ASSECONSBO CONSULTORIA, ASSESSORIA E CONTABILIDADE LTDA",
+            "nome_fantasia": "ASSECON ASSESSORIA E CONTABILIDADE"
+        },
+        "45966947000190": {
+            "razao_social": "PREVENTIVA PRESIDENTE PRUDENTE MEDICINA E SEGURANCA DO TRABALHO LTDA",
+            "nome_fantasia": "PREVENTIVA PRESIDENTE PRUDENTE"
+        },
+        "01379459000100": {
+            "razao_social": "SELMA MARTINS PIO AMERICANA",
+            "nome_fantasia": "RESTAURANTE FOGAO A LENHA"
+        },
+        "04572614000107": {
+            "razao_social": "S. M. PECAS DE EMPILHADEIRAS LTDA",
+            "nome_fantasia": "S.M.PECAS EMPILHADEIRAS"
+        },
+        "20022155000136": {
+            "razao_social": "ALPHA FORMA COMERCIO E CONFECCOES DE ROUPAS INTIMAS LTDA",
+            "nome_fantasia": ""
+        },
+        "27241019000186": {
+            "razao_social": "LH CALDEIRA MODA INTIMA E PRAIA LTDA",
+            "nome_fantasia": ""
+        },
+        "29321993000185": {
+            "razao_social": "JACKELINE DE O.CALDEIRA COMERCIO DE ROUPAS INTIMAS LTDA",
+            "nome_fantasia": ""
+        },
+        "29321993000266": {
+            "razao_social": "JACKELINE DE O.CALDEIRA COMERCIO DE ROUPAS INTIMAS LTDA",
+            "nome_fantasia": "PRIMICIA MODA INTIMA E PRAIA"
+        },
+        "15825917000100": {
+            "razao_social": "AVCM MODA INTIMA E PRAIA LTDA",
+            "nome_fantasia": ""
+        },
+        "16566528000162": {
+            "razao_social": "GABRIEL GALDENCIO DOS SANTOS MODA INTIMA E PRAIA",
+            "nome_fantasia": ""
+        },
+        "24847951000169": {
+            "razao_social": "FOGAO A LENHA IV LTDA",
+            "nome_fantasia": "FOGAO A LENHA"
+        },
+        "24602540000103": {
+            "razao_social": "OPTICA FANTINI E SOLCIA LTDA",
+            "nome_fantasia": ""
+        },
+        "11703276000152": {
+            "razao_social": "OPTICAS MOREIRA & SANDOVAL LTDA",
+            "nome_fantasia": "OPTICAS MOREIRA & SANDOVAL"
+        },
+        "45001593000149": {
+            "razao_social": "OTICA SILVERIO E SANCHES LTDA",
+            "nome_fantasia": ""
+        },
+        "56978463000187": {
+            "razao_social": "CONDOMINIO EDIFICIO DANUBIO",
+            "nome_fantasia": ""
+        },
+        "51709501000182": {
+            "razao_social": "BRUNO L B FABIANO ESPETINHOS - DIVINO ESPETO",
+            "nome_fantasia": "DIVINO ESPETO"
+        },
+        "17020857000176": {
+            "razao_social": "R. W. CASA DE CARNES E MERCEARIA LTDA",
+            "nome_fantasia": "DIVINO CORTE LOJA 2"
+        },
+        "56983224000115": {
+            "razao_social": "ESCRITORIO CONTABIL MODELO LTDA",
+            "nome_fantasia": ""
+        },
+        "46357861000122": {
+            "razao_social": "RB MODA INTIMA E PRAIA LTDA",
+            "nome_fantasia": ""
+        },
+        "02333398000103": {
+            "razao_social": "CONDOMINIO EDIFICIO JOSE BERTIE",
+            "nome_fantasia": "CONDOMINIO RESIDENCIAL JOSE BERTIE"
+        },
+        "07223735000123": {
+            "razao_social": "GILBERTONE DISTRIBUIDORA DE BRINQUEDOS E PLASTICOS LTDA",
+            "nome_fantasia": ""
+        },
+        "04087801000197": {
+            "razao_social": "SEG SAUDE OCUPACIONAL LTDA",
+            "nome_fantasia": "SEG"
+        },
+        "06132268000163": {
+            "razao_social": "SAO LUCAS MEDICINA OCUPACIONAL LTDA",
+            "nome_fantasia": ""
+        },
+        "08197515000135": {
+            "razao_social": "FRED ALVES",
+            "nome_fantasia": ""
+        },
+        "07712519000141": {
+            "razao_social": "KARINE BATAGIN BACCHIN",
+            "nome_fantasia": "ANIMED HOSPITAL VETERINARIO 24H"
+        },
+        "60015470000150": {
+            "razao_social": "60.015.470 ANTONIO SANTOS DE OLIVEIRA",
+            "nome_fantasia": ""
+        },
+        "41566484000118": {
+            "razao_social": "R B ALVES PROMOCAO E VENDAS",
+            "nome_fantasia": "ENFOKO SOLUCOES EM MERCHANDISIGN"
+        },
+        "27386153848": {
+            "razao_social": "CLAUDIO VENTURELLI",
+            "nome_fantasia": ""
+        },
+        "63807553000170": {
+            "razao_social": "SEGCAMP SEGURANCA E SAUDE DO TRABALHO MODERNA LTDA",
+            "nome_fantasia": "SEGCAMP SEGURANCA E SAUDE DO TRABALHO MODERNA"
+        },
+        "01978167000194": {
+            "razao_social": "IZABEL C. DE QUEIROZ CIAMARRO",
+            "nome_fantasia": "MARCA REGISTRADA"
+        },
+        "60722337000134": {
+            "razao_social": "CONDOMINIO BOA VISTA",
+            "nome_fantasia": ""
+        },
+        "15086733000168": {
+            "razao_social": "PAPILE SERVICOS ADMINISTRATIVOS LTDA",
+            "nome_fantasia": ""
+        },
+        "57307708000298": {
+            "razao_social": "VALADAO MODA INTIMA E PRAIA LTDA",
+            "nome_fantasia": ""
+        },
+        "33345929000373": {
+            "razao_social": "LETICIA MACHADO VALADAO LTDA",
+            "nome_fantasia": ""
+        }
+    },
+    "choices": {
+        "07993752000140": "razao_social",
+        "48713280000101": "PROLAB",
+        "29293809000211": "nome_fantasia",
+        "37676904000141": "nome_fantasia",
+        "34850043000188": "ULTRA OCUPACIONAL",
+        "54338544000197": "nome_fantasia",
+        "26286900000130": "nome_fantasia",
+        "35524031228545": "nome_fantasia",
+        "60220786000184": "nome_fantasia",
+        "07802562000106": "razao_social",
+        "51714868000194": "razao_social",
+        "28545961000109": "nome_fantasia",
+        "51989360000107": "nome_fantasia",
+        "52095649000137": "nome_fantasia",
+        "46308162000192": "nome_fantasia",
+        "14174709000118": "nome_fantasia",
+        "01061386000104": "nome_fantasia",
+        "63358459000181": "razao_social",
+        "14487446000105": "nome_fantasia",
+        "39860194000130": "nome_fantasia",
+        "34468224000144": "nome_fantasia",
+        "14420000028000": "razao_social",
+        "42206038000165": "razao_social",
+        "17677784000190": "razao_social",
+        "29650878000154": "nome_fantasia",
+        "29412957000127": "nome_fantasia",
+        "13220000028000": "razao_social",
+        "11469869000104": "razao_social",
+        "42692591000155": "nome_fantasia",
+        "62744051000185": "nome_fantasia",
+        "96504741000189": "SLN SERVICOS MEDICOS LTDA",
+        "25015721000104": "nome_fantasia",
+        "14378199000109": "razao_social",
+        "49442296000190": "razao_social",
+        "32436047000199": "nome_fantasia",
+        "05906999000156": "razao_social",
+        "54174519000115": "nome_fantasia",
+        "10748732000118": "nome_fantasia",
+        "45802481000197": "razao_social",
+        "18986134000199": "razao_social",
+        "04300355000157": "nome_fantasia",
+        "27923081000158": "razao_social",
+        "58369575000166": "razao_social",
+        "19966610000334": "nome_fantasia",
+        "08776621000173": "razao_social",
+        "07750648000124": "nome_fantasia",
+        "25198221000147": "razao_social",
+        "09095702000170": "razao_social",
+        "18006736000132": "nome_fantasia",
+        "62240548000166": "razao_social",
+        "14256420000148": "nome_fantasia",
+        "61890942000187": "razao_social",
+        "62921991000100": "razao_social",
+        "19355233000135": "nome_fantasia",
+        "25449435000149": "nome_fantasia",
+        "07551564000161": "nome_fantasia",
+        "19966610000172": "nome_fantasia",
+        "60322519000118": "nome_fantasia",
+        "30063277000124": "razao_social",
+        "41723184000103": "nome_fantasia",
+        "42901279000124": "razao_social",
+        "54991369000132": "razao_social",
+        "62636824000100": "razao_social",
+        "18936879000143": "nome_fantasia",
+        "11448256000182": "nome_fantasia",
+        "40359059000195": "nome_fantasia",
+        "60715000000108": "razao_social",
+        "74548413000141": "razao_social",
+        "62468418000185": "razao_social",
+        "27289605000109": "nome_fantasia",
+        "26551567000140": "razao_social",
+        "20215683000101": "nome_fantasia",
+        "30080649000120": "razao_social",
+        "66405225000136": "razao_social",
+        "63982563000142": "razao_social",
+        "04103848000105": "razao_social",
+        "66834961000100": "nome_fantasia",
+        "54369310000107": "nome_fantasia",
+        "03842237000108": "nome_fantasia",
+        "36665483000190": "nome_fantasia",
+        "28039379000162": "razao_social",
+        "52132405000187": "razao_social",
+        "63976350000108": "razao_social",
+        "58841939000169": "razao_social",
+        "59771757000121": "razao_social",
+        "42034585000100": "nome_fantasia",
+        "14500000300597": "razao_social",
+        "63554067000198": "nome_fantasia",
+        "19299579000163": "nome_fantasia",
+        "11721433000152": "nome_fantasia",
+        "24960705000119": "nome_fantasia",
+        "54458289000116": "razao_social",
+        "54280757000105": "razao_social",
+        "62321280000197": "razao_social",
+        "16670085076720": "razao_social",
+        "55357677000173": "razao_social",
+        "29021031000100": "razao_social",
+        "34777702000106": "razao_social",
+        "02630115000195": "razao_social",
+        "32899548000101": "razao_social",
+        "23954149000105": "razao_social",
+        "40761054000194": "razao_social",
+        "27191369000185": "razao_social",
+        "17120482000116": "razao_social",
+        "18511742000147": "razao_social",
+        "10945498000119": "razao_social",
+        "05370858000161": "nome_fantasia",
+        "26195288000190": "razao_social",
+        "32727609000153": "razao_social",
+        "48758293000105": "razao_social",
+        "04088208000165": "razao_social",
+        "55201756000190": "razao_social",
+        "51107470000190": "nome_fantasia",
+        "10461302000110": "nome_fantasia",
+        "50254514000141": "razao_social",
+        "12264335000104": "razao_social",
+        "55277488000190": "razao_social",
+        "48628366000136": "nome_fantasia",
+        "28630531000187": "nome_fantasia",
+        "02558157000162": "razao_social",
+        "48130011000112": "razao_social",
+        "06990590000123": "razao_social",
+        "66784544000108": "razao_social",
+        "32916420000109": "razao_social",
+        "65985347000186": "razao_social",
+        "23770379000114": "nome_fantasia",
+        "46180895000194": "razao_social",
+        "11720815000161": "nome_fantasia",
+        "30013123000128": "razao_social",
+        "18797265000128": "nome_fantasia",
+        "13724435000120": "nome_fantasia",
+        "45966947000190": "nome_fantasia",
+        "01379459000100": "nome_fantasia",
+        "04572614000107": "nome_fantasia",
+        "20022155000136": "razao_social",
+        "27241019000186": "razao_social",
+        "29321993000185": "razao_social",
+        "29321993000266": "nome_fantasia",
+        "15825917000100": "razao_social",
+        "16566528000162": "razao_social",
+        "24847951000169": "nome_fantasia",
+        "24602540000103": "razao_social",
+        "11703276000152": "nome_fantasia",
+        "45001593000149": "razao_social",
+        "56978463000187": "razao_social",
+        "51709501000182": "nome_fantasia",
+        "17020857000176": "nome_fantasia",
+        "56983224000115": "razao_social",
+        "46357861000122": "razao_social",
+        "02333398000103": "nome_fantasia",
+        "07223735000123": "razao_social",
+        "04087801000197": "nome_fantasia",
+        "06132268000163": "razao_social",
+        "08197515000135": "razao_social",
+        "07712519000141": "nome_fantasia",
+        "60015470000150": "razao_social",
+        "41566484000118": "nome_fantasia",
+        "27386153848": "razao_social",
+        "63807553000170": "nome_fantasia",
+        "01978167000194": "nome_fantasia",
+        "60722337000134": "razao_social",
+        "15086733000168": "razao_social",
+        "57307708000298": "razao_social",
+        "33345929000373": "razao_social"
+    }
+}
