@@ -808,6 +808,56 @@ if st.runtime.exists():
             background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%) !important;
         }
 
+        /* High contrast Widget Labels */
+        label[data-testid="stWidgetLabel"],
+        label[data-testid="stWidgetLabel"] p,
+        div[data-testid="stWidgetLabel"] p,
+        .stSelectbox label,
+        .stFileUploader label {
+            color: #f8fafc !important;
+            font-weight: 600 !important;
+            font-size: 0.9rem !important;
+            letter-spacing: 0.01em !important;
+            margin-bottom: 0.3rem !important;
+        }
+
+        /* File Uploader Custom Blue Button Styling */
+        div[data-testid="stFileUploader"] button,
+        section[data-testid="stFileUploaderDropzone"] button,
+        [data-testid="stFileUploaderDeleteFile"] button {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+            color: #ffffff !important;
+            border: 1px solid #3b82f6 !important;
+            font-weight: 700 !important;
+            font-size: 0.88rem !important;
+            border-radius: 8px !important;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4) !important;
+            transition: all 0.3s ease !important;
+            padding: 0.4rem 1.2rem !important;
+        }
+
+        div[data-testid="stFileUploader"] button:hover,
+        section[data-testid="stFileUploaderDropzone"] button:hover {
+            background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%) !important;
+            box-shadow: 0 6px 18px rgba(37, 99, 235, 0.6) !important;
+            transform: translateY(-1px) !important;
+            color: #ffffff !important;
+        }
+
+        div[data-testid="stFileUploader"] button *,
+        section[data-testid="stFileUploaderDropzone"] button * {
+            color: #ffffff !important;
+            font-weight: 700 !important;
+        }
+
+        /* Dropzone container text visibility */
+        [data-testid="stFileUploaderDropzoneInstructions"] div,
+        [data-testid="stFileUploaderDropzoneInstructions"] span,
+        [data-testid="stFileUploaderDropzoneInstructions"] small {
+            color: #cbd5e1 !important;
+            font-weight: 500 !important;
+        }
+
         /* Custom Popover buttons in grid */
         .stPopover>button {
             background: rgba(99, 102, 241, 0.12) !important;
