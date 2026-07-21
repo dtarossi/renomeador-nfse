@@ -1039,7 +1039,37 @@ if st.runtime.exists():
     active_directory = st.session_state.active_directory
 
     if not os.path.exists(active_directory):
-        st.error(f"❌ Diretório `{active_directory}` não encontrado. Por favor, selecione uma pasta de trabalho válida utilizando o botão acima.")
+        cloud_workdir = "/tmp/nfse_cloud_workdir"
+        os.makedirs(cloud_workdir, exist_ok=True)
+
+        st.markdown('<div class="glass-card" style="margin-bottom: 1.5rem; padding: 1.8rem; text-align: center;">', unsafe_allow_html=True)
+        st.markdown("### 📤 Upload de Arquivos (Modo Nuvem / Streamlit Cloud)")
+        st.markdown("<p style='color:#94a3b8; margin-bottom: 1.2rem;'>Arraste e solte seus arquivos PDF e XML de NFS-e para analisar e renomear diretamente pelo navegador.</p>", unsafe_allow_html=True)
+
+        uploaded_files = st.file_uploader(
+            "Selecione ou arraste os arquivos de Notas Fiscais (PDF e XML):",
+            type=["pdf", "xml"],
+            accept_multiple_files=True,
+            key="cloud_file_uploader"
+        )
+
+        if uploaded_files:
+            # Clear previous uploaded files
+            for old_f in os.listdir(cloud_workdir):
+                try:
+                    os.remove(os.path.join(cloud_workdir, old_f))
+                except Exception:
+                    pass
+            for uf in uploaded_files:
+                target_path = os.path.join(cloud_workdir, uf.name)
+                with open(target_path, "wb") as f:
+                    f.write(uf.getbuffer())
+            st.session_state.active_directory = cloud_workdir
+            st.toast("Arquivos enviados com sucesso! 🎉")
+            st.rerun()
+
+        st.markdown('</div>', unsafe_allow_html=True)
+        file_results = []
     else:
         # Process files
         with st.spinner("Analisando arquivos PDF/XML na pasta..."):
@@ -1047,6 +1077,8 @@ if st.runtime.exists():
 
         if not file_results:
             st.warning("⚠️ Nenhum arquivo PDF ou XML foi encontrado no diretório selecionado.")
+            if active_directory == "/tmp/nfse_cloud_workdir":
+                st.info("💡 Envie arquivos utilizando o campo de upload acima.")
         else:
             # 1. MONITORING PANEL (Top level metrics glows)
             ready_count = sum(1 for r in file_results if r["status"] == "ready")
@@ -1403,6 +1435,25 @@ if st.runtime.exists():
                         with st.expander("Ver falhas / erros"):
                             for name, err in failed_list:
                                 st.markdown(f"• `{name}`: <span style='color:#f87171;'>{err}</span>", unsafe_allow_html=True)
+
+                if active_directory == "/tmp/nfse_cloud_workdir" or not os.path.exists("/Users/Tarossi"):
+                    import io
+                    import zipfile
+                    zip_buffer = io.BytesIO()
+                    with zipfile.ZipFile(zip_buffer, "w", zipfile.ZIP_DEFLATED) as zf:
+                        for f in os.listdir(active_directory):
+                            fp = os.path.join(active_directory, f)
+                            if os.path.isfile(fp):
+                                zf.write(fp, arcname=f)
+                    zip_buffer.seek(0)
+                    st.markdown("<br>", unsafe_allow_html=True)
+                    st.download_button(
+                        label="📦 Baixar Todos os Arquivos Renomeados (.ZIP)",
+                        data=zip_buffer,
+                        file_name="nfse_renomeadas.zip",
+                        mime="application/zip",
+                        key="btn_download_zip_report"
+                    )
 
                 st.button("Atualizar Painel / Recarregar")
 
