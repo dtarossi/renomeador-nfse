@@ -1138,7 +1138,7 @@ if st.runtime.exists():
             st.markdown("<small style='color:#94a3b8;'>Clique no CNPJ para ajustar a preferência de nomenclatura (Razão Social, Nome Fantasia ou Personalisar) de forma interativa por prestador.</small><br><br>", unsafe_allow_html=True)
 
             # Grid Columns Header Definition
-            col_status, col_method, col_file, col_cnpj, col_month, col_prestador, col_nfs, col_target = st.columns([0.6, 0.7, 2.6, 1.2, 0.4, 3.2, 0.6, 3.5])
+            col_status, col_method, col_file, col_cnpj, col_month, col_prestador, col_nfs, col_target = st.columns([0.6, 0.7, 2.3, 1.2, 0.7, 2.8, 0.7, 3.4])
 
             col_status.markdown("<small style='color:#a5b4fc; font-weight:600; text-transform:uppercase; font-size:0.82rem;'>Status</small>", unsafe_allow_html=True)
             col_method.markdown("<small style='color:#a5b4fc; font-weight:600; text-transform:uppercase; font-size:0.82rem;'>Método</small>", unsafe_allow_html=True)
@@ -1157,7 +1157,7 @@ if st.runtime.exists():
             # Grid Rows Rendering
             for idx, r in enumerate(file_results):
                 # Outer grid columns wrapper
-                col_status_c, col_method_c, col_file_c, col_cnpj_c, col_month_c, col_prestador_c, col_nfs_c, col_target_c = st.columns([0.6, 0.7, 2.6, 1.2, 0.4, 3.2, 0.6, 3.5])
+                col_status_c, col_method_c, col_file_c, col_cnpj_c, col_month_c, col_prestador_c, col_nfs_c, col_target_c = st.columns([0.6, 0.7, 2.3, 1.2, 0.7, 2.8, 0.7, 3.4])
 
                 # Status Badge
                 if r["status"] == "ready":
@@ -1265,42 +1265,43 @@ if st.runtime.exists():
                                         st.session_state.manual_overrides[r["filename"]] = {}
                                     st.session_state.manual_overrides[r["filename"]]["cnpj"] = ""
                                     st.rerun()
-                                elif len(digits) == 14:
+                                elif len(digits) in [11, 14]:
                                     if r["filename"] not in st.session_state.manual_overrides:
                                         st.session_state.manual_overrides[r["filename"]] = {}
                                     st.session_state.manual_overrides[r["filename"]]["cnpj"] = digits
                                     st.rerun()
                 else:
-                    # Missing CNPJ turns into an active compact text input
+                    # Missing CNPJ turns into an active compact popover
                     with col_cnpj_c:
-                        cnpj_input = st.text_input(
-                            "Digitar CNPJ",
-                            value="",
-                            key=f"input_manual_cnpj_{r['filename']}_{idx}",
-                            label_visibility="collapsed",
-                            placeholder="Digitar CNPJ"
-                        )
-                        if cnpj_input:
-                            digits = re.sub(r'\D', '', cnpj_input)
-                            if len(digits) == 14:
-                                if r["filename"] not in st.session_state.manual_overrides:
-                                    st.session_state.manual_overrides[r["filename"]] = {}
-                                st.session_state.manual_overrides[r["filename"]]["cnpj"] = digits
-                                st.rerun()
+                        with st.popover("➕ CNPJ", use_container_width=True):
+                            st.markdown("**Digitar CNPJ/CPF Prestador:**")
+                            cnpj_input = st.text_input(
+                                "CNPJ/CPF (somente números):",
+                                value="",
+                                key=f"input_manual_cnpj_{r['filename']}_{idx}",
+                                placeholder="Ex: 34850043000188"
+                            )
+                            if cnpj_input:
+                                digits = re.sub(r'\D', '', cnpj_input)
+                                if len(digits) in [11, 14]:
+                                    if r["filename"] not in st.session_state.manual_overrides:
+                                        st.session_state.manual_overrides[r["filename"]] = {}
+                                    st.session_state.manual_overrides[r["filename"]]["cnpj"] = digits
+                                    st.rerun()
 
-                # Month: Display or Manual Override Input
+                # Month: Interactive Popover for Present or Missing Month
                 with col_month_c:
-                    if r["month"]:
-                        st.markdown(f"<div style='margin-top: 2.5px; text-align:center; font-size:0.78rem; font-weight:600; color:#e2e8f0;'>{r['month']}</div>", unsafe_allow_html=True)
-                    else:
+                    month_val = r["month"] if r["month"] else ""
+                    month_label = month_val if month_val else "✏️ Mês"
+                    with st.popover(month_label, use_container_width=True):
+                        st.markdown(f"**Ajustar Mês para `{r['filename']}`:**")
                         month_input = st.text_input(
-                            "MM",
-                            value="",
+                            "Mês (01 a 12):",
+                            value=month_val,
                             key=f"input_manual_month_{r['filename']}_{idx}",
-                            label_visibility="collapsed",
-                            placeholder="MM"
+                            placeholder="Ex: 07"
                         )
-                        if month_input:
+                        if month_input != month_val:
                             if month_input.isdigit() and len(month_input) in [1, 2]:
                                 formatted_month = month_input.zfill(2)
                                 if r["filename"] not in st.session_state.manual_overrides:
@@ -1345,19 +1346,19 @@ if st.runtime.exists():
                             st.session_state.manual_overrides[r["filename"]]["prestador"] = manual_name
                             st.rerun()
 
-                # NFS Number: Display or Manual Override Input
+                # NFS Number: Interactive Popover for Present or Missing Number
                 with col_nfs_c:
-                    if r["number"]:
-                        st.markdown(f"<div style='margin-top: 2.5px; text-align:center; font-size:0.78rem; font-weight:600; color:#e2e8f0;'>{r['number']}</div>", unsafe_allow_html=True)
-                    else:
+                    nfs_val = r["number"] if r["number"] else ""
+                    nfs_label = nfs_val if nfs_val else "✏️ NFS"
+                    with st.popover(nfs_label, use_container_width=True):
+                        st.markdown(f"**Ajustar Número NFS para `{r['filename']}`:**")
                         number_input = st.text_input(
-                            "NFS",
-                            value="",
+                            "Número da Nota Fiscal:",
+                            value=nfs_val,
                             key=f"input_manual_number_{r['filename']}_{idx}",
-                            label_visibility="collapsed",
-                            placeholder="Nota"
+                            placeholder="Ex: 7038"
                         )
-                        if number_input:
+                        if number_input != nfs_val:
                             if number_input.strip():
                                 if r["filename"] not in st.session_state.manual_overrides:
                                     st.session_state.manual_overrides[r["filename"]] = {}
